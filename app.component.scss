@@ -1,0 +1,91 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  font-family: var(--font-family);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #00395D; /* Barclays navy */
+  color: #fff;
+  transition: width 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar-header {
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.95rem;
+}
+
+.menu li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.menu li.active {
+  background: #00AEEF; /* Barclays cyan */
+  color: #fff;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Header */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-bottom: 2px solid #00AEEF; /* Barclays cyan highlight */
+}
+
+.topbar h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00395D;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+  display: inline-flex;
+  align-items: center;
+  color: #00395D;
+}
+
+/* Page Content */
+.content {
+  padding: 1.5rem;
+  background: #f5f7fa; /* light banking grey */
+  flex: 1;
+}
