@@ -1,0 +1,62 @@
+<div class="layout">
+  <!-- Sidebar -->
+  <aside
+    class="sidebar"
+    [ngClass]="{ collapsed: sidebarCollapsed }"
+  >
+    <div class="sidebar-header">
+      <h2 *ngIf="!sidebarCollapsed">Barclays</h2>
+      <i *ngIf="sidebarCollapsed" class="pi pi-building"></i>
+    </div>
+    <ul class="menu">
+      <li>
+        <i class="pi pi-home"></i>
+        <span *ngIf="!sidebarCollapsed">Home</span>
+      </li>
+      <li>
+        <i class="pi pi-chart-line"></i>
+        <span *ngIf="!sidebarCollapsed">Dashboard</span>
+      </li>
+      <li class="active">
+        <i class="pi pi-id-card"></i>
+        <span *ngIf="!sidebarCollapsed">KYC Management</span>
+      </li>
+      <li>
+        <i class="pi pi-file"></i>
+        <span *ngIf="!sidebarCollapsed">Reports</span>
+      </li>
+      <li>
+        <i class="pi pi-cog"></i>
+        <span *ngIf="!sidebarCollapsed">Settings</span>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Top Header -->
+    <header class="topbar">
+      <button
+        class="p-button p-button-text p-button-plain sidebar-toggle"
+        (click)="toggleSidebar()"
+      >
+        <i class="pi pi-bars"></i>
+      </button>
+      <h1>KYC Management</h1>
+    </header>
+
+    <!-- Page Content -->
+    <main class="content">
+      <p>Page content for KYC Management goes here.</p>
+
+      <!-- Example ag-Grid -->
+      <ag-grid-angular
+        class="ag-theme-alpine"
+        style="width: 100%; height: 400px;"
+        [rowData]="rowData"
+        [columnDefs]="colDefs"
+      >
+      </ag-grid-angular>
+    </main>
+  </div>
+</div>
